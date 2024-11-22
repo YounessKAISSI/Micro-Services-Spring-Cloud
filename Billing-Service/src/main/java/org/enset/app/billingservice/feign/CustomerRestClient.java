@@ -1,4 +1,4 @@
-package org.enset.app.billingservice.fein;
+package org.enset.app.billingservice.feign;
 
 import org.enset.app.billingservice.model.Customer;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -12,6 +12,6 @@ public interface CustomerRestClient {
     @GetMapping("/api/customers/{id}")
     Customer findCustomerById(@PathVariable Long id);
 
-    @GetMapping("api/customers")
+    @GetMapping("/api/customers")
     PagedModel<Customer> getAllCustomers();
 }

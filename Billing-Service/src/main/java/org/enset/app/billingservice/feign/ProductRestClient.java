@@ -1,4 +1,4 @@
-package org.enset.app.billingservice.fein;
+package org.enset.app.billingservice.feign;
 
 import org.enset.app.billingservice.model.Product;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -11,7 +11,7 @@ public interface ProductRestClient {
     @GetMapping("/api/products/{id}")
     Product getProductId(@PathVariable String id);
 
-    @GetMapping("api/products")
+    @GetMapping("/api/products")
     PagedModel<Product> getAllProducts();
 }
 

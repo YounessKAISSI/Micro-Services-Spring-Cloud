@@ -2,8 +2,8 @@ package org.enset.app.billingservice;
 
 import org.enset.app.billingservice.entities.Bill;
 import org.enset.app.billingservice.entities.ProductItem;
-import org.enset.app.billingservice.fein.CustomerRestClient;
-import org.enset.app.billingservice.fein.ProductRestClient;
+import org.enset.app.billingservice.feign.CustomerRestClient;
+import org.enset.app.billingservice.feign.ProductRestClient;
 import org.enset.app.billingservice.model.Customer;
 import org.enset.app.billingservice.model.Product;
 import org.enset.app.billingservice.repositories.BillRepository;
@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Random;
 
 @SpringBootApplication
